@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Still Holding On</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <!-- NAVIGATION BAR -->
+  <nav>
+    <ul class="nav-tabs">
+      <li><a href="index.html" class="active">Home</a></li>
+      <li><a href="photos.html">Photos</a></li>
+      <li><a href="memories.html">Memories</a></li>
+    </ul>
+  </nav>
+  <!-- END NAVIGATION BAR -->
+
+  <audio autoplay loop>
+    <source src="E:\Visual Studio\Love Reconnect Site\$UICIDEBOY$ - NOT EVEN GHOSTS ARE THIS EMPTY.mp3" type="audio/mpeg">
+    Your browser does not support the audio element.
+  </audio>
+
+  <div class="container">
+    <h1>Our Story</h1>
+    <p>
+      3 years. It’s more than just a measure of time — it’s countless laughs, quiet moments,
+      dreams, lessons, and a bond I still feel in my soul. I built this to remind you that even if things cracked,
+      the foundation was always love.
+    </p>
+    <p>
+      I miss you. Not just the idea of you — I miss us. The real, imperfect, beautiful us.
+    </p>
+    <p>
+      My heart still beats in your direction, and my hands are still reaching out — not to hold you back,
+      but to ask: can I try again, better this time?
+    </p>
+
+    <div class="question">
+      Will you still hold my hand?<br />
+      <em>This time, I’ll carry yours gently.</em>
+    </div>
+    <button class="button" onclick="handleResponse('yes')">Yes</button>
+    <button class="button" onclick="handleResponse('no')">Not now</button>
+
+    <footer>
+      Made with ❤️ and hope.<br />
+      — Cameron Clay
+    </footer>
+  </div>
+
+  <script>
+    function handleResponse(answer) {
+      if (answer === 'yes') {
+        alert("I'll never let go again.");
+      } else {
+        alert("I understand. Just know the door is always open.");
+      }
+    }
+
+    // Falling hearts effect
+    function createHeart() {
+      const heart = document.createElement('div');
+      heart.classList.add('heart');
+      heart.innerText = '❤';
+      heart.style.left = Math.random() * 100 + 'vw';
+      heart.style.animationDuration = Math.random() * 2 + 3 + 's';
+      document.body.appendChild(heart);
+
+      setTimeout(() => {
+        heart.remove();
+      }, 5000);
+    }
+
+    setInterval(createHeart, 300);
+  </script>
+</body>
+</html>

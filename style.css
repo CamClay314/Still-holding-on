@@ -1,0 +1,138 @@
+
+    @import url('https://fonts.googleapis.com/css2?family=Playfair+Display:wght@500&family=Roboto&display=swap');
+
+    body {
+      margin: 0;
+      padding: 0;
+      font-family: 'Roboto', sans-serif;
+      background: linear-gradient(to top, #f7d9e3, #dbeaff);
+      color: #333;
+      overflow-x: hidden;
+      animation: fadeInBody 2s ease-in;
+    }
+
+    @keyframes fadeInBody {
+      from { opacity: 0; }
+      to { opacity: 1; }
+    }
+
+    /* --- NAVIGATION BAR STYLES --- */
+    nav {
+      width: 100%;
+      background: #fff;
+      box-shadow: 0 2px 8px rgba(127, 41, 130, 0.07);
+      padding: 0 0 0 0;
+      position: sticky;
+      top: 0;
+      z-index: 10;
+      animation: fadeInContainer 1.5s ease-in;
+    }
+    .nav-tabs {
+      display: flex;
+      justify-content: center;
+      gap: 40px;
+      padding: 18px 0 12px 0;
+      list-style: none;
+      margin: 0;
+    }
+    .nav-tabs li {
+      display: inline;
+    }
+    .nav-tabs a {
+      text-decoration: none;
+      color: #7f2982;
+      font-family: 'Playfair Display', serif;
+      font-size: 1.15rem;
+      padding: 8px 18px;
+      border-radius: 6px;
+      transition: background 0.2s, color 0.2s;
+    }
+    .nav-tabs a:hover, .nav-tabs a.active {
+      background: #f7d9e3;
+      color: #a135a3;
+    }
+    /* --- END NAVIGATION BAR STYLES --- */
+
+    .container {
+      max-width: 800px;
+      margin: 0 auto;
+      padding: 40px 20px;
+      text-align: center;
+      animation: fadeInContainer 2.5s ease-in;
+    }
+
+    @keyframes fadeInContainer {
+      from { transform: translateY(20px); opacity: 0; }
+      to { transform: translateY(0); opacity: 1; }
+    }
+
+    h1 {
+      font-family: 'Playfair Display', serif;
+      font-size: 2.5rem;
+      margin-bottom: 20px;
+      color: #7f2982;
+    }
+
+    p {
+      font-size: 1.1rem;
+      line-height: 1.8;
+      color: #444;
+      animation: fadeInText 3s ease-in;
+    }
+
+    @keyframes fadeInText {
+      from { opacity: 0; }
+      to { opacity: 1; }
+    }
+
+    .heart {
+      position: fixed;
+      top: -20px;
+      font-size: 20px;
+      color: #ff5c8a;
+      animation: fall linear infinite;
+    }
+
+    @keyframes fall {
+      to {
+        transform: translateY(120vh);
+      }
+    }
+
+    .question {
+      margin-top: 50px;
+      font-size: 1.4rem;
+      color: #444;
+      font-weight: bold;
+      animation: fadeInText 4s ease-in;
+    }
+
+    .button {
+      background-color: #7f2982;
+      color: white;
+      padding: 12px 24px;
+      border: none;
+      border-radius: 8px;
+      font-size: 1rem;
+      cursor: pointer;
+      margin: 20px 10px;
+      transition: background-color 0.3s, transform 0.2s;
+      animation: fadeInButton 5s ease-in;
+    }
+
+    .button:hover {
+      background-color: #a135a3;
+      transform: scale(1.05);
+    }
+
+    @keyframes fadeInButton {
+      from { opacity: 0; transform: scale(0.95); }
+      to { opacity: 1; transform: scale(1); }
+    }
+
+    footer {
+      margin-top: 60px;
+      font-size: 0.9rem;
+      color: #888;
+      animation: fadeInText 6s ease-in;
+    }
